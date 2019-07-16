@@ -212,7 +212,7 @@ int page=1;
         [dataTask resume];
 
         
-        // 刷新表格。 ？
+        // 刷新表格
         [self reloadData];
         
         // 结束刷新状态, 隐藏HHFooterView
