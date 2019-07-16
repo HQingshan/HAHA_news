@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B40088D2229964F100199226 /* HHHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B40088D1229964F100199226 /* HHHeaderView.m */; };
+		B405B54E22913557004E4D06 /* HHFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B405B54D22913557004E4D06 /* HHFooterView.m */; };
+		B405B551229147E1004E4D06 /* HHcollectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B405B550229147E1004E4D06 /* HHcollectTableViewController.m */; };
+		B405B5572291BC25004E4D06 /* HHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B405B5562291BC25004E4D06 /* HHSearchViewController.m */; };
+		B405C3CA2286978B00626821 /* HHNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B405C3C92286978B00626821 /* HHNewsViewController.m */; };
+		B407DFA522881A910070F851 /* HHNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B407DFA422881A910070F851 /* HHNewsModel.m */; };
+		B40BA12E228F2FE7000446B8 /* HHhistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40BA12D228F2FE7000446B8 /* HHhistoryTableViewController.m */; };
+		B4171BA52292E4F6005E5F99 /* HHsearchrecordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4171BA42292E4F6005E5F99 /* HHsearchrecordTableViewController.m */; };
+		B41C4DAF22905AA300D7823E /* HHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B41C4DAD22905AA300D7823E /* HHWebViewController.m */; };
+		B41C4DB022905AA300D7823E /* HHWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B41C4DAE22905AA300D7823E /* HHWebViewController.xib */; };
+		B420D6A822A6503000B07E01 /* HHRotationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B420D6A722A6503000B07E01 /* HHRotationTableViewCell.m */; };
+		B45C81A12293CE14001224AA /* HHNewsdetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45C81A02293CE14001224AA /* HHNewsdetailsTableViewController.m */; };
+		B45C81A42293DB35001224AA /* HHNewdetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B45C81A32293DB35001224AA /* HHNewdetailTableViewCell.m */; };
+		B45C81B122946F96001224AA /* HHVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B45C81B022946F96001224AA /* HHVideoTableViewCell.m */; };
+		B45C81B622947975001224AA /* HHTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45C81B522947975001224AA /* HHTabBarViewController.m */; };
+		B45C81BF229479F1001224AA /* HHVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B45C81BD229479F1001224AA /* HHVideoModel.m */; };
+		B45C81C222947A17001224AA /* HHVideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45C81C022947A17001224AA /* HHVideoTableViewController.m */; };
+		B4E6914C228DC06A0005A4A3 /* HHNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E6914B228DC06A0005A4A3 /* HHNewsTableView.m */; };
+		B4F4E6112281D40500A767AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4E6102281D40500A767AE /* AppDelegate.m */; };
+		B4F4E6192281D40600A767AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F4E6182281D40600A767AE /* Assets.xcassets */; };
+		B4F4E61C2281D40600A767AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F4E61A2281D40600A767AE /* LaunchScreen.storyboard */; };
+		B4F4E61F2281D40600A767AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4E61E2281D40600A767AE /* main.m */; };
+		B4FF6E4C228A845900D9A0F5 /* HHNew_p0_TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FF6E4B228A845900D9A0F5 /* HHNew_p0_TableViewCell.m */; };
+		B4FF6E4F228A847800D9A0F5 /* HHNew_p1_TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FF6E4E228A847800D9A0F5 /* HHNew_p1_TableViewCell.m */; };
+		B4FF6E52228A849100D9A0F5 /* HHNew_p3_TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FF6E51228A849100D9A0F5 /* HHNew_p3_TableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B40088D0229964F100199226 /* HHHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHeaderView.h; sourceTree = "<group>"; };
+		B40088D1229964F100199226 /* HHHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHeaderView.m; sourceTree = "<group>"; };
+		B405B4D22283F1B500CDEF3F /* HHTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHTabBarViewController.h; sourceTree = "<group>"; };
+		B405B54C22913557004E4D06 /* HHFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHFooterView.h; sourceTree = "<group>"; };
+		B405B54D22913557004E4D06 /* HHFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHFooterView.m; sourceTree = "<group>"; };
+		B405B54F229147E1004E4D06 /* HHcollectTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHcollectTableViewController.h; sourceTree = "<group>"; };
+		B405B550229147E1004E4D06 /* HHcollectTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHcollectTableViewController.m; sourceTree = "<group>"; };
+		B405B5552291BC25004E4D06 /* HHSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HHSearchViewController.h; path = "HAHA新闻/classes/Collect/Coutroller/HHSearchViewController.h"; sourceTree = SOURCE_ROOT; };
+		B405B5562291BC25004E4D06 /* HHSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HHSearchViewController.m; path = "HAHA新闻/classes/Collect/Coutroller/HHSearchViewController.m"; sourceTree = SOURCE_ROOT; };
+		B405C3C82286978B00626821 /* HHNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNewsViewController.h; sourceTree = "<group>"; };
+		B405C3C92286978B00626821 /* HHNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNewsViewController.m; sourceTree = "<group>"; };
+		B407DFA322881A910070F851 /* HHNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNewsModel.h; sourceTree = "<group>"; };
+		B407DFA422881A910070F851 /* HHNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNewsModel.m; sourceTree = "<group>"; };
+		B40BA12C228F2FE7000446B8 /* HHhistoryTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHhistoryTableViewController.h; sourceTree = "<group>"; };
+		B40BA12D228F2FE7000446B8 /* HHhistoryTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHhistoryTableViewController.m; sourceTree = "<group>"; };
+		B4171BA32292E4F6005E5F99 /* HHsearchrecordTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HHsearchrecordTableViewController.h; path = "HAHA新闻/classes/Collect/Coutroller/HHsearchrecordTableViewController.h"; sourceTree = SOURCE_ROOT; };
+		B4171BA42292E4F6005E5F99 /* HHsearchrecordTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HHsearchrecordTableViewController.m; path = "HAHA新闻/classes/Collect/Coutroller/HHsearchrecordTableViewController.m"; sourceTree = SOURCE_ROOT; };
+		B41C4DAC22905AA300D7823E /* HHWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHWebViewController.h; sourceTree = "<group>"; };
+		B41C4DAD22905AA300D7823E /* HHWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHWebViewController.m; sourceTree = "<group>"; };
+		B41C4DAE22905AA300D7823E /* HHWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HHWebViewController.xib; sourceTree = "<group>"; };
+		B420D6A622A6503000B07E01 /* HHRotationTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHRotationTableViewCell.h; sourceTree = "<group>"; };
+		B420D6A722A6503000B07E01 /* HHRotationTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHRotationTableViewCell.m; sourceTree = "<group>"; };
+		B45C819F2293CE14001224AA /* HHNewsdetailsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNewsdetailsTableViewController.h; sourceTree = "<group>"; };
+		B45C81A02293CE14001224AA /* HHNewsdetailsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNewsdetailsTableViewController.m; sourceTree = "<group>"; };
+		B45C81A22293DB35001224AA /* HHNewdetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNewdetailTableViewCell.h; sourceTree = "<group>"; };
+		B45C81A32293DB35001224AA /* HHNewdetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNewdetailTableViewCell.m; sourceTree = "<group>"; };
+		B45C81AF22946F96001224AA /* HHVideoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHVideoTableViewCell.h; sourceTree = "<group>"; };
+		B45C81B022946F96001224AA /* HHVideoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHVideoTableViewCell.m; sourceTree = "<group>"; };
+		B45C81B522947975001224AA /* HHTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHTabBarViewController.m; sourceTree = "<group>"; };
+		B45C81BD229479F1001224AA /* HHVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHVideoModel.m; sourceTree = "<group>"; };
+		B45C81BE229479F1001224AA /* HHVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHVideoModel.h; sourceTree = "<group>"; };
+		B45C81C022947A17001224AA /* HHVideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHVideoTableViewController.m; sourceTree = "<group>"; };
+		B45C81C122947A17001224AA /* HHVideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHVideoTableViewController.h; sourceTree = "<group>"; };
+		B4E6914A228DC06A0005A4A3 /* HHNewsTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNewsTableView.h; sourceTree = "<group>"; };
+		B4E6914B228DC06A0005A4A3 /* HHNewsTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNewsTableView.m; sourceTree = "<group>"; };
+		B4F4E60C2281D40500A767AE /* HAHA新闻.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HAHA新闻.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4F4E60F2281D40500A767AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B4F4E6102281D40500A767AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B4F4E6182281D40600A767AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4F4E61B2281D40600A767AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4F4E61D2281D40600A767AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4F4E61E2281D40600A767AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B4FF6E4A228A845900D9A0F5 /* HHNew_p0_TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNew_p0_TableViewCell.h; sourceTree = "<group>"; };
+		B4FF6E4B228A845900D9A0F5 /* HHNew_p0_TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNew_p0_TableViewCell.m; sourceTree = "<group>"; };
+		B4FF6E4D228A847800D9A0F5 /* HHNew_p1_TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNew_p1_TableViewCell.h; sourceTree = "<group>"; };
+		B4FF6E4E228A847800D9A0F5 /* HHNew_p1_TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNew_p1_TableViewCell.m; sourceTree = "<group>"; };
+		B4FF6E50228A849100D9A0F5 /* HHNew_p3_TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNew_p3_TableViewCell.h; sourceTree = "<group>"; };
+		B4FF6E51228A849100D9A0F5 /* HHNew_p3_TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNew_p3_TableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4F4E6092281D40500A767AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B405B4BE2283ED9E00CDEF3F /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				B45C81A522946B0C001224AA /* Video */,
+				B405B4BF2283ED9E00CDEF3F /* Collect */,
+				B405B4C32283ED9E00CDEF3F /* History */,
+				B405B4C72283ED9E00CDEF3F /* News */,
+				B4171BA62292F081005E5F99 /* Newsdetails */,
+				B405B4CB2283ED9E00CDEF3F /* Search */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		B405B4BF2283ED9E00CDEF3F /* Collect */ = {
+			isa = PBXGroup;
+			children = (
+				B405B4C02283ED9E00CDEF3F /* Coutroller */,
+			);
+			path = Collect;
+			sourceTree = "<group>";
+		};
+		B405B4C02283ED9E00CDEF3F /* Coutroller */ = {
+			isa = PBXGroup;
+			children = (
+				B405B54F229147E1004E4D06 /* HHcollectTableViewController.h */,
+				B405B550229147E1004E4D06 /* HHcollectTableViewController.m */,
+			);
+			path = Coutroller;
+			sourceTree = "<group>";
+		};
+		B405B4C32283ED9E00CDEF3F /* History */ = {
+			isa = PBXGroup;
+			children = (
+				B405B4C42283ED9E00CDEF3F /* Coutroller */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		B405B4C42283ED9E00CDEF3F /* Coutroller */ = {
+			isa = PBXGroup;
+			children = (
+				B40BA12C228F2FE7000446B8 /* HHhistoryTableViewController.h */,
+				B40BA12D228F2FE7000446B8 /* HHhistoryTableViewController.m */,
+			);
+			path = Coutroller;
+			sourceTree = "<group>";
+		};
+		B405B4C72283ED9E00CDEF3F /* News */ = {
+			isa = PBXGroup;
+			children = (
+				B405B4C82283ED9E00CDEF3F /* Coutroller */,
+				B405B4C92283ED9E00CDEF3F /* Model */,
+				B405B4CA2283ED9E00CDEF3F /* view */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		B405B4C82283ED9E00CDEF3F /* Coutroller */ = {
+			isa = PBXGroup;
+			children = (
+				B405C3C82286978B00626821 /* HHNewsViewController.h */,
+				B405C3C92286978B00626821 /* HHNewsViewController.m */,
+			);
+			path = Coutroller;
+			sourceTree = "<group>";
+		};
+		B405B4C92283ED9E00CDEF3F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B407DFA322881A910070F851 /* HHNewsModel.h */,
+				B407DFA422881A910070F851 /* HHNewsModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B405B4CA2283ED9E00CDEF3F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B4E6914A228DC06A0005A4A3 /* HHNewsTableView.h */,
+				B4E6914B228DC06A0005A4A3 /* HHNewsTableView.m */,
+				B420D6A622A6503000B07E01 /* HHRotationTableViewCell.h */,
+				B420D6A722A6503000B07E01 /* HHRotationTableViewCell.m */,
+				B405B54C22913557004E4D06 /* HHFooterView.h */,
+				B405B54D22913557004E4D06 /* HHFooterView.m */,
+				B40088D0229964F100199226 /* HHHeaderView.h */,
+				B40088D1229964F100199226 /* HHHeaderView.m */,
+				B4FF6E4A228A845900D9A0F5 /* HHNew_p0_TableViewCell.h */,
+				B4FF6E4B228A845900D9A0F5 /* HHNew_p0_TableViewCell.m */,
+				B4FF6E4D228A847800D9A0F5 /* HHNew_p1_TableViewCell.h */,
+				B4FF6E4E228A847800D9A0F5 /* HHNew_p1_TableViewCell.m */,
+				B4FF6E50228A849100D9A0F5 /* HHNew_p3_TableViewCell.h */,
+				B4FF6E51228A849100D9A0F5 /* HHNew_p3_TableViewCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B405B4CB2283ED9E00CDEF3F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				B405B4CC2283ED9E00CDEF3F /* Coutroller */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		B405B4CC2283ED9E00CDEF3F /* Coutroller */ = {
+			isa = PBXGroup;
+			children = (
+				B4171BA32292E4F6005E5F99 /* HHsearchrecordTableViewController.h */,
+				B4171BA42292E4F6005E5F99 /* HHsearchrecordTableViewController.m */,
+				B405B5552291BC25004E4D06 /* HHSearchViewController.h */,
+				B405B5562291BC25004E4D06 /* HHSearchViewController.m */,
+			);
+			path = Coutroller;
+			sourceTree = "<group>";
+		};
+		B4171BA62292F081005E5F99 /* Newsdetails */ = {
+			isa = PBXGroup;
+			children = (
+				B4171BA72292F081005E5F99 /* Coutroller */,
+				B4171BA92292F081005E5F99 /* view */,
+			);
+			path = Newsdetails;
+			sourceTree = "<group>";
+		};
+		B4171BA72292F081005E5F99 /* Coutroller */ = {
+			isa = PBXGroup;
+			children = (
+				B45C819F2293CE14001224AA /* HHNewsdetailsTableViewController.h */,
+				B45C81A02293CE14001224AA /* HHNewsdetailsTableViewController.m */,
+				B41C4DAC22905AA300D7823E /* HHWebViewController.h */,
+				B41C4DAD22905AA300D7823E /* HHWebViewController.m */,
+				B41C4DAE22905AA300D7823E /* HHWebViewController.xib */,
+			);
+			path = Coutroller;
+			sourceTree = "<group>";
+		};
+		B4171BA92292F081005E5F99 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B45C81A22293DB35001224AA /* HHNewdetailTableViewCell.h */,
+				B45C81A32293DB35001224AA /* HHNewdetailTableViewCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B45C81A522946B0C001224AA /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				B45C81A622946B0C001224AA /* Coutroller */,
+				B45C81A722946B0C001224AA /* Model */,
+				B45C81A822946B0C001224AA /* view */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		B45C81A622946B0C001224AA /* Coutroller */ = {
+			isa = PBXGroup;
+			children = (
+				B45C81C122947A17001224AA /* HHVideoTableViewController.h */,
+				B45C81C022947A17001224AA /* HHVideoTableViewController.m */,
+			);
+			path = Coutroller;
+			sourceTree = "<group>";
+		};
+		B45C81A722946B0C001224AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B45C81BE229479F1001224AA /* HHVideoModel.h */,
+				B45C81BD229479F1001224AA /* HHVideoModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B45C81A822946B0C001224AA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B45C81AF22946F96001224AA /* HHVideoTableViewCell.h */,
+				B45C81B022946F96001224AA /* HHVideoTableViewCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B4F4E6032281D40500A767AE = {
+			isa = PBXGroup;
+			children = (
+				B4F4E60E2281D40500A767AE /* HAHA新闻 */,
+				B4F4E60D2281D40500A767AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B4F4E60D2281D40500A767AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4F4E60C2281D40500A767AE /* HAHA新闻.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4F4E60E2281D40500A767AE /* HAHA新闻 */ = {
+			isa = PBXGroup;
+			children = (
+				B405B4BE2283ED9E00CDEF3F /* classes */,
+				B4F4E60F2281D40500A767AE /* AppDelegate.h */,
+				B4F4E6102281D40500A767AE /* AppDelegate.m */,
+				B405B4D22283F1B500CDEF3F /* HHTabBarViewController.h */,
+				B45C81B522947975001224AA /* HHTabBarViewController.m */,
+				B4F4E6182281D40600A767AE /* Assets.xcassets */,
+				B4F4E61A2281D40600A767AE /* LaunchScreen.storyboard */,
+				B4F4E61D2281D40600A767AE /* Info.plist */,
+				B4F4E61E2281D40600A767AE /* main.m */,
+			);
+			path = "HAHA新闻";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4F4E60B2281D40500A767AE /* HAHA新闻 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4F4E6222281D40600A767AE /* Build configuration list for PBXNativeTarget "HAHA新闻" */;
+			buildPhases = (
+				B4F4E6082281D40500A767AE /* Sources */,
+				B4F4E6092281D40500A767AE /* Frameworks */,
+				B4F4E60A2281D40500A767AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HAHA新闻";
+			productName = "HAHA新闻";
+			productReference = B4F4E60C2281D40500A767AE /* HAHA新闻.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4F4E6042281D40500A767AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HH;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "你好帅！";
+				TargetAttributes = {
+					B4F4E60B2281D40500A767AE = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = B4F4E6072281D40500A767AE /* Build configuration list for PBXProject "HAHA新闻" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B4F4E6032281D40500A767AE;
+			productRefGroup = B4F4E60D2281D40500A767AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4F4E60B2281D40500A767AE /* HAHA新闻 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4F4E60A2281D40500A767AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F4E61C2281D40600A767AE /* LaunchScreen.storyboard in Resources */,
+				B41C4DB022905AA300D7823E /* HHWebViewController.xib in Resources */,
+				B4F4E6192281D40600A767AE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4F4E6082281D40500A767AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45C81A42293DB35001224AA /* HHNewdetailTableViewCell.m in Sources */,
+				B405B5572291BC25004E4D06 /* HHSearchViewController.m in Sources */,
+				B41C4DAF22905AA300D7823E /* HHWebViewController.m in Sources */,
+				B405B54E22913557004E4D06 /* HHFooterView.m in Sources */,
+				B4FF6E4F228A847800D9A0F5 /* HHNew_p1_TableViewCell.m in Sources */,
+				B4FF6E4C228A845900D9A0F5 /* HHNew_p0_TableViewCell.m in Sources */,
+				B4F4E61F2281D40600A767AE /* main.m in Sources */,
+				B40088D2229964F100199226 /* HHHeaderView.m in Sources */,
+				B45C81A12293CE14001224AA /* HHNewsdetailsTableViewController.m in Sources */,
+				B45C81BF229479F1001224AA /* HHVideoModel.m in Sources */,
+				B45C81C222947A17001224AA /* HHVideoTableViewController.m in Sources */,
+				B45C81B122946F96001224AA /* HHVideoTableViewCell.m in Sources */,
+				B405C3CA2286978B00626821 /* HHNewsViewController.m in Sources */,
+				B420D6A822A6503000B07E01 /* HHRotationTableViewCell.m in Sources */,
+				B4171BA52292E4F6005E5F99 /* HHsearchrecordTableViewController.m in Sources */,
+				B407DFA522881A910070F851 /* HHNewsModel.m in Sources */,
+				B4FF6E52228A849100D9A0F5 /* HHNew_p3_TableViewCell.m in Sources */,
+				B405B551229147E1004E4D06 /* HHcollectTableViewController.m in Sources */,
+				B45C81B622947975001224AA /* HHTabBarViewController.m in Sources */,
+				B4F4E6112281D40500A767AE /* AppDelegate.m in Sources */,
+				B40BA12E228F2FE7000446B8 /* HHhistoryTableViewController.m in Sources */,
+				B4E6914C228DC06A0005A4A3 /* HHNewsTableView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B4F4E61A2281D40600A767AE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4F4E61B2281D40600A767AE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B4F4E6202281D40600A767AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B4F4E6212281D40600A767AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B4F4E6232281D40600A767AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 88QA725R7T;
+				INFOPLIST_FILE = "HAHA新闻/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.HAHA--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B4F4E6242281D40600A767AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 88QA725R7T;
+				INFOPLIST_FILE = "HAHA新闻/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.HAHA--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4F4E6072281D40500A767AE /* Build configuration list for PBXProject "HAHA新闻" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4F4E6202281D40600A767AE /* Debug */,
+				B4F4E6212281D40600A767AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4F4E6222281D40600A767AE /* Build configuration list for PBXNativeTarget "HAHA新闻" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4F4E6232281D40600A767AE /* Debug */,
+				B4F4E6242281D40600A767AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B4F4E6042281D40500A767AE /* Project object */;
+}
