@@ -10,6 +10,7 @@
 #import "HHNew_p0_TableViewCell.h"
 #import "HHNewsModel.h"
 
+#import "HQS_LocalData.h"
 
 @interface HHcollectTableViewController ()
 
@@ -24,24 +25,7 @@
 {
     if (!_CollectnewsArray){
         
-        // 获取文件路径
-        NSString *Documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-        NSString *filePath =  [Documents stringByAppendingPathComponent:@"CollectList.json" ];
-//        NSLog(@"%@",NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES));
-        // 将文件数据化
-        NSData *data = [[NSData alloc] initWithContentsOfFile:filePath];
-        
-        if (data == NULL) {
-            _CollectnewsArray = [[NSMutableArray alloc]init];
-        }else{
-            // 将json数据转数组
-            NSArray *dictArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-            NSMutableArray *temp = [[NSMutableArray alloc] init];
-            for (NSDictionary *dict in dictArray) {
-                [temp addObject:dict];
-            }
-            _CollectnewsArray = temp;
-        }
+        _CollectnewsArray = [HQS_LocalData OCArrayBeReadfromDocumentsJSONFileName:@"CollectList"];
     }
     return _CollectnewsArray;
 }
@@ -54,14 +38,9 @@
 
 -(void)viewWillDisappear:(BOOL)animated{
     
-    // 加载全路径
-    NSString *Documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-    NSString *filePath =  [Documents stringByAppendingPathComponent:@"CollectList.json" ];
-    // 数组转JSON数据
-    NSData *tempData = [NSJSONSerialization  dataWithJSONObject:self.CollectnewsArray options:NSJSONWritingPrettyPrinted  error:nil];
-//        NSLog(@"%@",NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES));
-    // 写入数据
-    [tempData writeToFile:filePath atomically:YES];
+
+    
+    [HQS_LocalData OCArray:self.CollectnewsArray writeToDocumentsJSONFileName:@"CollectList"];
 }
 
 
@@ -103,15 +82,7 @@
     [self.tableView  reloadData];
     
     
-    // 加载全路径
-    NSString *Documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-    NSString *filePath =  [Documents stringByAppendingPathComponent:@"CollectList.json" ];
-    // 数组转JSON数据
-    NSData *tempData = [NSJSONSerialization  dataWithJSONObject:self.CollectnewsArray options:NSJSONWritingPrettyPrinted  error:nil];
-    //            NSLog(@"%@",NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES));
-    // 写入数据
-    [tempData writeToFile:filePath atomically:YES];
-
+    [HQS_LocalData OCArray:self.CollectnewsArray writeToDocumentsJSONFileName:@"CollectList"];
     
     
 }
@@ -162,7 +133,6 @@
         
     }
     if (self.CollectnewsArray[self.CollectnewsArray.count - indexPath.row -1] != NULL) {
-//        NSLog(@"%@",self.CollectnewsArray );
         cell.news = [HHNewsModel newsWithDict: self.CollectnewsArray[self.CollectnewsArray.count - indexPath.row -1] ];
     }
     
@@ -182,7 +152,6 @@
 //    左滑删除
 - ( UISwipeActionsConfiguration *)tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath {
     //删除
-    
     UIContextualAction *deleteRowAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive title:@"删除" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
         //      把删除这一行的国家从 显示汇率换算的名单中删除掉
         [self.CollectnewsArray removeObjectAtIndex:(self.CollectnewsArray.count - indexPath.row -1)];

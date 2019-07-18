@@ -146,8 +146,8 @@ int VDpage=1;
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSString *video = @"nba";
-        NSString *urlStr = [NSString stringWithFormat: @"http://api01.idataapi.cn:8000/news/toutiao?kw=%@&pageToken=%i&apikey=FKo121FpJnj9cGJkkUjHKZXEH0BV1QCaY3gpVWZanmGXGg8fGDIXoWSFtGhcLLU6",video,VDpage];
-        
+        NSString *urlStr = [NSString stringWithFormat: @"http://api01.idataapi.cn:8000/news/toutiao?kw=%@&pageToken=%i",video,VDpage];
+//        apikey=FKo121FpJnj9cGJkkUjHKZXEH0BV1QCaY3gpVWZanmGXGg8fGDIXoWSFtGhcLLU6
         urlStr=[urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
         
         // 1. url

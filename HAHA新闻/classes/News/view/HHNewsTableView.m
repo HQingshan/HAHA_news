@@ -9,6 +9,9 @@
 #import "HHNewsTableView.h"
 #import "HHFooterView.h"
 #import "HHHeaderView.h"
+#import "AFNetworking.h"
+
+
 
 #import "HHNewsModel.h"
 
@@ -94,31 +97,70 @@ int page=1;
     self.tableHeaderView = refreshHHHeaderView;    NSLog(@"refreshClick: -- 刷新触发");
     page = 1;
     
+    
+    /**
+     
     NSString *urlStr = [NSString stringWithFormat: @"http://api01.idataapi.cn:8000/news/qihoo?kw=%@&site=qq.com&pageToken=%i&apikey=T4hYohaiaDqdgeFA6R3osirDKh9zgQF4pX1SgT3gmkUIAWbGgKZXg5HKsCOZhBHC",self.channel,page];
-    
+
     urlStr=[urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-    
+
     // 1. url
     NSURL *url = [NSURL URLWithString:urlStr];
-    
+
     //2.创建请求对象
     NSURLRequest *request = [NSURLRequest requestWithURL: url];
-    
+
     //3.创建会话对象
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[NSOperationQueue mainQueue]];
-    
+
     //4.创建Task
     NSURLSessionDataTask *datatask = [session dataTaskWithRequest:request];
-    
+
     //5.执行Task
     [datatask resume];
+     
+     */
     
+    //1.创建会话管理者
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    NSDictionary *paramDict = @{
+                                @"kw":self.channel,
+                                @"site":@"qq.com",
+                                @"pageToken":[NSString stringWithFormat: @"%i",page],
+                               @"apikey":@"T4hYohaiaDqdgeFA6R3osirDKh9zgQF4pX1SgT3gmkUIAWbGgKZXg5HKsCOZhBHC"
+                                };
+    [manager GET:@"http://api01.idataapi.cn:8000/news/qihoo" parameters:paramDict  headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        if (responseObject != nil) {
+            //        NSLog(@"----***--%@--**----",temp);
+            if (page == 1) {
+                NSArray *dictArray =responseObject[@"data"];
+                self.fileData = [[NSMutableArray alloc]init];
+                for (NSDictionary *newsdict in dictArray) {
+                    [self.fileData addObject:newsdict ];
+                }
+                page ++;
+            }
+        }
+        NSLog(@"----***--%i--**----",page);
+        
+        
+        self.tableHeaderView.hidden = YES;
+        self.tableHeaderView = nil;
+        [self reloadData];
+        if (page == 2 && self.fileData != nil ) {
+            [self setupUpRefresh];
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"请求错误---%@",error);
+    }];
     
     
 
 
-    self.refreshControl.hidden = YES;
-    [self reloadData];// 刷新tableView即可
+
     
 }
 
@@ -175,6 +217,7 @@ int page=1;
     
 
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        /*
         NSString *urlStr = [NSString stringWithFormat: @"http://api01.idataapi.cn:8000/news/qihoo?kw=%@&site=qq.com&pageToken=%i&apikey=T4hYohaiaDqdgeFA6R3osirDKh9zgQF4pX1SgT3gmkUIAWbGgKZXg5HKsCOZhBHC",self.channel,page];
         
         urlStr=[urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
@@ -201,7 +244,6 @@ int page=1;
                 [self.fileData addObject:newsdict ];
                 [self.newsArray addObject:[HHNewsModel newsWithDict:newsdict]];
             }
-//            NSLog(@"----***--%zd--**----",self.fileData.count);
 
             page ++;
             //        NSLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
@@ -210,7 +252,34 @@ int page=1;
         
         // 5.每一个任务默认都是挂起的，需要调用 resume 方法
         [dataTask resume];
+        */
+        
+        //1.创建会话管理者
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        
+        NSDictionary *paramDict = @{
+                                    @"kw":self.channel,
+                                    @"site":@"qq.com",
+                                    @"pageToken":[NSString stringWithFormat: @"%i",page],
+                                    @"apikey":@"T4hYohaiaDqdgeFA6R3osirDKh9zgQF4pX1SgT3gmkUIAWbGgKZXg5HKsCOZhBHC"
+                                    };
+        [manager GET:@"http://api01.idataapi.cn:8000/news/qihoo" parameters:paramDict  headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 
+            
+            NSArray *dictArray =responseObject[@"data"];
+            for (NSDictionary *newsdict in dictArray) {
+                //                NSLog(@"----***--%@--**----",newsdict);
+                [self.fileData addObject:newsdict ];
+                [self.newsArray addObject:[HHNewsModel newsWithDict:newsdict]];
+            }
+            
+            page ++;
+            
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"请求错误---%@",error);
+        }];
+        
         
         // 刷新表格
         [self reloadData];
@@ -223,49 +292,51 @@ int page=1;
    
 }
 
-
-#pragma mark - NSURLSessionDataDelegate
--(void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler{
-//    NSLog(@"----*********----");
-    completionHandler(NSURLSessionResponseAllow);
-    
-    
-}
-
--(void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
-{
-    
-    // 4.将得到数据进行返序列化
-    NSDictionary *temp =[NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
-    NSLog(@"----***--%@--**----",temp);
-    if (temp != nil) {
-//        NSLog(@"----***--%@--**----",temp);
-        if (page == 1) {
-            NSArray *dictArray =temp[@"data"];
-            self.fileData = [[NSMutableArray alloc]init];
-            for (NSDictionary *newsdict in dictArray) {
-                [self.fileData addObject:newsdict ];
-        }
-            page ++;
-        }
-    }
-NSLog(@"----***--%i--**----",page);
-    
-}
-//当申请数据加载结束时
--(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
-{
-    
-    self.tableHeaderView.hidden = YES;
-    self.tableHeaderView = nil;
-    [self reloadData];
-//    page ++;
-    if (page == 2 && self.fileData != nil ) {
-        [self setupUpRefresh];
-    }
-
-}
-
+/*
+ 
+//#pragma mark - NSURLSessionDataDelegate
+//-(void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler{
+////    NSLog(@"----*********----");
+//    completionHandler(NSURLSessionResponseAllow);
+//
+//
+//}
+//
+//-(void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
+//{
+//
+//    // 4.将得到数据进行返序列化
+//    NSDictionary *temp =[NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+//    NSLog(@"----***--%@--**----",temp);
+//    if (temp != nil) {
+////        NSLog(@"----***--%@--**----",temp);
+//        if (page == 1) {
+//            NSArray *dictArray =temp[@"data"];
+//            self.fileData = [[NSMutableArray alloc]init];
+//            for (NSDictionary *newsdict in dictArray) {
+//                [self.fileData addObject:newsdict ];
+//        }
+//            page ++;
+//        }
+//    }
+//NSLog(@"----***--%i--**----",page);
+//
+//}
+////当申请数据加载结束时
+//-(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
+//{
+//
+//    self.tableHeaderView.hidden = YES;
+//    self.tableHeaderView = nil;
+//    [self reloadData];
+////    page ++;
+//    if (page == 2 && self.fileData != nil ) {
+//        [self setupUpRefresh];
+//    }
+//
+//}
+ 
+*/
 -(NSMutableDictionary *)images{
     if (_images == nil) {
         _images = [NSMutableDictionary dictionary];
@@ -292,7 +363,7 @@ NSLog(@"----***--%i--**----",page);
 -(NSOperationQueue *)queue{
     if (_queue == nil) {
         _queue  = [[NSOperationQueue alloc]init];
-        //最大bing并发数
+        //最大bing并发数12123123
         _queue.maxConcurrentOperationCount = 5;
     }
     
