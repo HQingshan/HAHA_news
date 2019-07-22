@@ -10,61 +10,33 @@
 #import "HHNew_p0_TableViewCell.h"
 #import "HHNewsModel.h"
 
+#import "HQS_LocalData.h"
+
 @interface HHhistoryTableViewController ()
 
 @property (nonatomic, strong) NSMutableArray *HistorynewsArray;
-
 
 @end
 
 @implementation HHhistoryTableViewController
 
-
-
-
 //加载历史记录数组数据 
 - (NSMutableArray *)HistorynewsArray
 {
     if (!_HistorynewsArray){
-        
-        // 获取文件路径
-        NSString *Documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-        NSString *filePath =  [Documents stringByAppendingPathComponent:@"HistoryList.json" ];
-        
-        // 将文件数据化
-        NSData *data = [[NSData alloc] initWithContentsOfFile:filePath];
-        
-        if (data == NULL) {
-            _HistorynewsArray = [[NSMutableArray alloc]init];
-        }else{
-        // 将json数据转数组
-        NSArray *dictArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-            NSMutableArray *temp = [[NSMutableArray alloc] init];
-            for (NSDictionary *dict in dictArray) {
-                [temp addObject:dict];
-            }
-            _HistorynewsArray = temp;
-        }
+            _HistorynewsArray = [HQS_LocalData OCArrayBeReadfromDocumentsJSONFileName: @"HistoryList"];
     }
     return _HistorynewsArray;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-
+    
     [self.tableView  reloadData];
-
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
     
-    // 加载全路径
-    NSString *Documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-    NSString *filePath =  [Documents stringByAppendingPathComponent:@"HistoryList.json" ];
-    // 数组转JSON数据
-    NSData *tempData = [NSJSONSerialization  dataWithJSONObject:self.HistorynewsArray options:NSJSONWritingPrettyPrinted  error:nil];
-    //    NSLog(@"%@",NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES));
-    // 写入数据
-    [tempData writeToFile:filePath atomically:YES];
+    [HQS_LocalData OCArray:self.HistorynewsArray writeToDocumentsJSONFileName:@"HistoryList"];
 }
 
 
@@ -74,21 +46,17 @@
     //注册通知(接收,监听,一个通知)添加记录
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ADD:) name:@"ADD" object:nil];
     
-    
     self.tabBarController.selectedIndex = 1;
-    
     
     self.tableView.tableFooterView = [[UIView alloc] init]; 
 
 }
-
 
 //添加浏览记录
 -(void)ADD:(NSNotification *)noti2{
     
     NSDictionary *dict = [noti2 object];
     
-//    NSLog(@"1111111%@",dict);
     BOOL exchange = NO;
     for (int i =  (int)lroundf( self.HistorynewsArray.count - 1 ); i >= 0; i--) {
         NSDictionary *obj = self.HistorynewsArray[i];
@@ -105,26 +73,12 @@
 
     [self.tableView  reloadData];
     
-    
-            // 加载全路径
-            NSString *Documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-            NSString *filePath =  [Documents stringByAppendingPathComponent:@"HistoryList.json" ];
-            // 数组转JSON数据
-            NSData *tempData = [NSJSONSerialization  dataWithJSONObject:self.HistorynewsArray options:NSJSONWritingPrettyPrinted  error:nil];
-//            NSLog(@"%@",NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES));
-            // 写入数据
-            [tempData writeToFile:filePath atomically:YES];
+    [HQS_LocalData OCArray:self.HistorynewsArray writeToDocumentsJSONFileName:@"HistoryList"];
 
 }
 
 
-
-
-
-
 #pragma mark - Table view data source
-
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
@@ -142,12 +96,10 @@
     {
         cell = [[HHNew_p0_TableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:IDCell];
         cell.backgroundColor = [UIColor clearColor];
-        
     }
     
     cell.news = [HHNewsModel newsWithDict:self.HistorynewsArray[self.HistorynewsArray.count - indexPath.row -1]];
-    
-    
+
     return cell;
 }
 
@@ -156,7 +108,6 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
         return 78;
-
 }
 
 
@@ -180,7 +131,6 @@
 
 // 选中了 cell 时触发
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     HHWebViewController   *webvc = [[HHWebViewController alloc]init];
     webvc.newdict = self.HistorynewsArray[self.HistorynewsArray.count - indexPath.row -1] ;
     webvc.news = [HHNewsModel newsWithDict: self.HistorynewsArray[self.HistorynewsArray.count - indexPath.row -1] ];

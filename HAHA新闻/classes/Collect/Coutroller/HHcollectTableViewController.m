@@ -37,9 +37,7 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    
 
-    
     [HQS_LocalData OCArray:self.CollectnewsArray writeToDocumentsJSONFileName:@"CollectList"];
 }
 

@@ -113,9 +113,7 @@
  cell.backgroundColor = [UIColor clearColor];
  
  }
- 
     cell.textLabel.text = self.Searcharray[self.Searcharray.count - indexPath.row -1];
- 
  
  return cell;
 }
@@ -123,10 +121,8 @@
 
 //    左滑删除
 - ( UISwipeActionsConfiguration *)tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //删除
-    
     UIContextualAction *deleteRowAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive title:@"删除" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
-        //      把删除这一行的国家从 显示汇率换算的名单中删除掉
+        //      把删除这一行的新闻从 显示新闻的名单中删除掉
         [self.Searcharray removeObjectAtIndex:(self.Searcharray.count - indexPath.row -1)];
         completionHandler (YES);
         //      删掉数据后更新整个列表

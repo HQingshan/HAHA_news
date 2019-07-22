@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1804762322E0B1D60056BB8E /* HHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1804762022E0B1D60056BB8E /* HHSearchViewController.m */; };
+		1804762422E0B1D60056BB8E /* HHsearchrecordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1804762122E0B1D60056BB8E /* HHsearchrecordTableViewController.m */; };
 		1830A3C822E03264008D5BA3 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1830A3BC22E03264008D5BA3 /* AFHTTPSessionManager.m */; };
 		1830A3C922E03264008D5BA3 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1830A3BF22E03264008D5BA3 /* AFNetworkReachabilityManager.m */; };
 		1830A3CA22E03264008D5BA3 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1830A3C122E03264008D5BA3 /* AFSecurityPolicy.m */; };
@@ -17,11 +19,9 @@
 		B40088D2229964F100199226 /* HHHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B40088D1229964F100199226 /* HHHeaderView.m */; };
 		B405B54E22913557004E4D06 /* HHFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B405B54D22913557004E4D06 /* HHFooterView.m */; };
 		B405B551229147E1004E4D06 /* HHcollectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B405B550229147E1004E4D06 /* HHcollectTableViewController.m */; };
-		B405B5572291BC25004E4D06 /* HHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B405B5562291BC25004E4D06 /* HHSearchViewController.m */; };
 		B405C3CA2286978B00626821 /* HHNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B405C3C92286978B00626821 /* HHNewsViewController.m */; };
 		B407DFA522881A910070F851 /* HHNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B407DFA422881A910070F851 /* HHNewsModel.m */; };
 		B40BA12E228F2FE7000446B8 /* HHhistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40BA12D228F2FE7000446B8 /* HHhistoryTableViewController.m */; };
-		B4171BA52292E4F6005E5F99 /* HHsearchrecordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4171BA42292E4F6005E5F99 /* HHsearchrecordTableViewController.m */; };
 		B41C4DAF22905AA300D7823E /* HHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B41C4DAD22905AA300D7823E /* HHWebViewController.m */; };
 		B41C4DB022905AA300D7823E /* HHWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B41C4DAE22905AA300D7823E /* HHWebViewController.xib */; };
 		B420D6A822A6503000B07E01 /* HHRotationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B420D6A722A6503000B07E01 /* HHRotationTableViewCell.m */; };
@@ -42,6 +42,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1804761F22E0B1D60056BB8E /* HHSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HHSearchViewController.h; path = "HAHA新闻/classes/Search/Controller/HHSearchViewController.h"; sourceTree = SOURCE_ROOT; };
+		1804762022E0B1D60056BB8E /* HHSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HHSearchViewController.m; path = "HAHA新闻/classes/Search/Controller/HHSearchViewController.m"; sourceTree = SOURCE_ROOT; };
+		1804762122E0B1D60056BB8E /* HHsearchrecordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HHsearchrecordTableViewController.m; path = "HAHA新闻/classes/Search/Controller/HHsearchrecordTableViewController.m"; sourceTree = SOURCE_ROOT; };
+		1804762222E0B1D60056BB8E /* HHsearchrecordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HHsearchrecordTableViewController.h; path = "HAHA新闻/classes/Search/Controller/HHsearchrecordTableViewController.h"; sourceTree = SOURCE_ROOT; };
 		1830A3BA22E03264008D5BA3 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		1830A3BB22E03264008D5BA3 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		1830A3BC22E03264008D5BA3 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
@@ -65,16 +69,12 @@
 		B405B54D22913557004E4D06 /* HHFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHFooterView.m; sourceTree = "<group>"; };
 		B405B54F229147E1004E4D06 /* HHcollectTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHcollectTableViewController.h; sourceTree = "<group>"; };
 		B405B550229147E1004E4D06 /* HHcollectTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHcollectTableViewController.m; sourceTree = "<group>"; };
-		B405B5552291BC25004E4D06 /* HHSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HHSearchViewController.h; path = "HAHA新闻/classes/Collect/Coutroller/HHSearchViewController.h"; sourceTree = SOURCE_ROOT; };
-		B405B5562291BC25004E4D06 /* HHSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HHSearchViewController.m; path = "HAHA新闻/classes/Collect/Coutroller/HHSearchViewController.m"; sourceTree = SOURCE_ROOT; };
 		B405C3C82286978B00626821 /* HHNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNewsViewController.h; sourceTree = "<group>"; };
 		B405C3C92286978B00626821 /* HHNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNewsViewController.m; sourceTree = "<group>"; };
 		B407DFA322881A910070F851 /* HHNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNewsModel.h; sourceTree = "<group>"; };
 		B407DFA422881A910070F851 /* HHNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNewsModel.m; sourceTree = "<group>"; };
 		B40BA12C228F2FE7000446B8 /* HHhistoryTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHhistoryTableViewController.h; sourceTree = "<group>"; };
 		B40BA12D228F2FE7000446B8 /* HHhistoryTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHhistoryTableViewController.m; sourceTree = "<group>"; };
-		B4171BA32292E4F6005E5F99 /* HHsearchrecordTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HHsearchrecordTableViewController.h; path = "HAHA新闻/classes/Collect/Coutroller/HHsearchrecordTableViewController.h"; sourceTree = SOURCE_ROOT; };
-		B4171BA42292E4F6005E5F99 /* HHsearchrecordTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HHsearchrecordTableViewController.m; path = "HAHA新闻/classes/Collect/Coutroller/HHsearchrecordTableViewController.m"; sourceTree = SOURCE_ROOT; };
 		B41C4DAC22905AA300D7823E /* HHWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHWebViewController.h; sourceTree = "<group>"; };
 		B41C4DAD22905AA300D7823E /* HHWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHWebViewController.m; sourceTree = "<group>"; };
 		B41C4DAE22905AA300D7823E /* HHWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HHWebViewController.xib; sourceTree = "<group>"; };
@@ -258,10 +258,10 @@
 		B405B4CC2283ED9E00CDEF3F /* Coutroller */ = {
 			isa = PBXGroup;
 			children = (
-				B4171BA32292E4F6005E5F99 /* HHsearchrecordTableViewController.h */,
-				B4171BA42292E4F6005E5F99 /* HHsearchrecordTableViewController.m */,
-				B405B5552291BC25004E4D06 /* HHSearchViewController.h */,
-				B405B5562291BC25004E4D06 /* HHSearchViewController.m */,
+				1804762222E0B1D60056BB8E /* HHsearchrecordTableViewController.h */,
+				1804762122E0B1D60056BB8E /* HHsearchrecordTableViewController.m */,
+				1804761F22E0B1D60056BB8E /* HHSearchViewController.h */,
+				1804762022E0B1D60056BB8E /* HHSearchViewController.m */,
 			);
 			path = Coutroller;
 			sourceTree = "<group>";
@@ -436,8 +436,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1804762322E0B1D60056BB8E /* HHSearchViewController.m in Sources */,
 				B45C81A42293DB35001224AA /* HHNewdetailTableViewCell.m in Sources */,
-				B405B5572291BC25004E4D06 /* HHSearchViewController.m in Sources */,
 				B41C4DAF22905AA300D7823E /* HHWebViewController.m in Sources */,
 				B405B54E22913557004E4D06 /* HHFooterView.m in Sources */,
 				1830A3D122E081FF008D5BA3 /* HQS_LocalData.m in Sources */,
@@ -445,6 +445,7 @@
 				B4FF6E4C228A845900D9A0F5 /* HHNew_p0_TableViewCell.m in Sources */,
 				1830A3CA22E03264008D5BA3 /* AFSecurityPolicy.m in Sources */,
 				B4F4E61F2281D40600A767AE /* main.m in Sources */,
+				1804762422E0B1D60056BB8E /* HHsearchrecordTableViewController.m in Sources */,
 				B40088D2229964F100199226 /* HHHeaderView.m in Sources */,
 				B45C81A12293CE14001224AA /* HHNewsdetailsTableViewController.m in Sources */,
 				B45C81BF229479F1001224AA /* HHVideoModel.m in Sources */,
@@ -453,7 +454,6 @@
 				B405C3CA2286978B00626821 /* HHNewsViewController.m in Sources */,
 				1830A3C822E03264008D5BA3 /* AFHTTPSessionManager.m in Sources */,
 				B420D6A822A6503000B07E01 /* HHRotationTableViewCell.m in Sources */,
-				B4171BA52292E4F6005E5F99 /* HHsearchrecordTableViewController.m in Sources */,
 				1830A3CD22E03264008D5BA3 /* AFURLSessionManager.m in Sources */,
 				B407DFA522881A910070F851 /* HHNewsModel.m in Sources */,
 				B4FF6E52228A849100D9A0F5 /* HHNew_p3_TableViewCell.m in Sources */,

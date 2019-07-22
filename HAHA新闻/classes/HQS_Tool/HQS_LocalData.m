@@ -10,7 +10,7 @@
 
 @implementation HQS_LocalData
 
-
+//将oc数组 ArrayDete 转为json存在本地Documents 名为Name
 + (BOOL)OCArray: (NSArray *)ArrayDete  writeToDocumentsJSONFileName:(NSString *)Name;
 {
     // 加载全路径
@@ -24,7 +24,7 @@
     
     return  [tempData  writeToFile:filePath atomically:YES];
 }
-
+//将存在本地Documents 名为Name的json文件读取 转为oc数组
 + (nullable id)OCArrayBeReadfromDocumentsJSONFileName:(NSString *)Name;
 {
     // 获取文件路径
