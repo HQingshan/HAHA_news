@@ -16,9 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 /*  新闻模型  */
 @property (nonatomic,strong)  HHNewsModel *news;
 
-
-
-
 @end
 
 NS_ASSUME_NONNULL_END

@@ -42,12 +42,27 @@ int page=1;
 
 @implementation HHNewsTableView
 
+// 创建一个cellID，用于cell的重用
+NSString *ROcellID = @"ROcellID";
+// 创建一个cellID，用于cell的重用
+NSString *P3cellID = @"P3cellID";
+// 创建一个cellID，用于cell的重用
+NSString *P1cellID = @"P1cellID";
+
+// 创建一个cellID，用于cell的重用
+NSString *P0cellID = @"P0cellID";
+
 - (void)drawRect:(CGRect)rect {
     //  定时刷新
     NSTimer  *timer  =  [NSTimer scheduledTimerWithTimeInterval:600.0 target:self selector:@selector(timeIntervalSinceReferenceDate) userInfo:nil repeats:YES];
     
     self.delegate = self;
     self.dataSource = self;
+    
+    [self registerClass:[HHNew_p0_TableViewCell class] forCellReuseIdentifier:P0cellID];
+    [self registerClass:[HHNew_p1_TableViewCell class] forCellReuseIdentifier:P1cellID];
+    [self registerClass:[HHNew_p3_TableViewCell class] forCellReuseIdentifier:P3cellID];
+    [self registerClass:[HHRotationTableViewCell class] forCellReuseIdentifier:ROcellID];
     
     
     [self setupRefresh];
@@ -394,13 +409,12 @@ int page=1;
     if ([self.channel isEqualToString:@"新闻"]) {
         if (indexPath.row == 0) {
             
-            // 创建一个cellID，用于cell的重用
-            NSString *ROcellID = @"ROcellID";
             // 从tableview的重用池里通过cellID取一个cell
             HHRotationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ROcellID];
             if (cell == nil) {
                 // 如果tableview的重用池中没有取到，就创建一个新的cell，style为Value2，并用cellID对其进行标记。
                 cell = [[HHRotationTableViewCell alloc] init];
+            }
                 NSMutableArray *temp = [[NSMutableArray alloc] init];
                 NSMutableDictionary *tempimage = [NSMutableDictionary dictionary];
 
@@ -422,7 +436,7 @@ int page=1;
                 cell.news = temp ;
                 [cell setNews:temp];
                 [cell setImages:tempimage];
-            }
+            
             
             return cell;
         }
@@ -432,14 +446,12 @@ int page=1;
     
     
     if (new.imageUrls.count >= 3) {
-        // 创建一个cellID，用于cell的重用
-        NSString *P3cellID = @"P3cellID";
         // 从tableview的重用池里通过cellID取一个cell
         HHNew_p3_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:P3cellID];
-        if (cell == nil) {
-            // 如果tableview的重用池中没有取到，就创建一个新的cell，style为Value2，并用cellID对其进行标记。
-            cell = [[HHNew_p3_TableViewCell alloc] init];
-        }
+//        if (cell == nil) {
+//            // 如果tableview的重用池中没有取到，就创建一个新的cell，style为Value2，并用cellID对其进行标记。
+//            cell = [[HHNew_p3_TableViewCell alloc] init];
+//        }
         cell.HHUIImage3 =cell.HHUIImage2 =cell.HHUIImage1 = [UIImage imageNamed: @"jiazai" ];
         [cell setNews:new];
         
@@ -633,14 +645,12 @@ int page=1;
     
     
     if (new.imageUrls) {
-        // 创建一个cellID，用于cell的重用
-        NSString *P1cellID = @"P1cellID";
         // 从tableview的重用池里通过cellID取一个cell
         HHNew_p1_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:P1cellID];
-        if (cell == nil) {
-            // 如果tableview的重用池中没有取到，就创建一个新的cell，style为Value2，并用cellID对其进行标记。
-            cell = [[HHNew_p1_TableViewCell alloc] init];
-        }
+//        if (cell == nil) {
+//            // 如果tableview的重用池中没有取到，就创建一个新的cell，style为Value2，并用cellID对其进行标记。
+//            cell = [[HHNew_p1_TableViewCell alloc] init];
+//        }
         cell.HHUIImage =[UIImage imageNamed: @"jiazai" ];
         [cell setNews:new];
         
@@ -707,14 +717,12 @@ int page=1;
     
     
     
-    // 创建一个cellID，用于cell的重用
-    NSString *P0cellID = @"P0cellID";
     // 从tableview的重用池里通过cellID取一个cell
     HHNew_p0_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:P0cellID];
-    if (cell == nil) {
-        // 如果tableview的重用池中没有取到，就创建一个新的cell，style为Value2，并用cellID对其进行标记。
-        cell = [[HHNew_p0_TableViewCell alloc] init];
-    }
+//    if (cell == nil) {
+//        // 如果tableview的重用池中没有取到，就创建一个新的cell，style为Value2，并用cellID对其进行标记。
+//        cell = [[HHNew_p0_TableViewCell alloc] init];
+//    }
     [cell setNews:new];
     
     
