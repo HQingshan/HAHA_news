@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tabBar.backgroundColor = [UIColor whiteColor];
     //  添加子控制器
     [self setupAllChildViewController];
     
@@ -41,6 +42,8 @@
 
     //导航栏背景颜色
     news.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:1/255.0 green:200/255.0 blue:230/255.0 alpha:1];
+    news.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:1/255.0 green:200/255.0 blue:230/255.0 alpha:1];
+
     UIBarButtonItem *button =[[UIBarButtonItem alloc]initWithTitle:@"HAHA新闻" style:UIBarButtonItemStylePlain target:nil action:nil ];
 
     button.tintColor = [UIColor blackColor];
