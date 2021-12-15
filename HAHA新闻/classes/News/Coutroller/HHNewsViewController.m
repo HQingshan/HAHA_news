@@ -71,7 +71,6 @@ long Sc[5]={0,0,0,0,0};
 - (NSArray *)getLabelArrayFromSubviews
 {
     
-    
     NSMutableArray *arrayM = [NSMutableArray array];
     for (UILabel *label in _smallScrollView.subviews) {
         if ([ label isKindOfClass:[UILabel class]]) {
@@ -98,7 +97,7 @@ long Sc[5]={0,0,0,0,0};
         UIScrollView *scroll = [[UIScrollView alloc]init ];
         
 
-        scroll.frame = CGRectMake(0,CGRectGetMaxY(self.smallScrollView.frame), ScrW, ScrH-CGRectGetMaxY(self.smallScrollView.frame)-170);
+        scroll.frame = CGRectMake(0,CGRectGetMaxY(self.smallScrollView.frame), ScrW, ScrH-CGRectGetMaxY(self.smallScrollView.frame)- kNavAndTabHeight );
         scroll.backgroundColor = [UIColor whiteColor];
         
         _bigScrollView = scroll ;
@@ -240,7 +239,6 @@ long Sc[5]={0,0,0,0,0};
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
     
-    
     HHsearchrecordTableViewController   *schvc = [[HHsearchrecordTableViewController alloc]init];
     
     [self.navigationController  pushViewController: schvc animated:YES];
@@ -304,9 +302,7 @@ long Sc[5]={0,0,0,0,0};
         Sc[i] = i;
         HHNewsTableView *tableView = [[HHNewsTableView alloc] initWithFrame:CGRectMake(ScrW*i, 0, ScrW, self.bigScrollView.frame.size.height) style:UITableViewStylePlain];
         tableView.channel = self.channelList[i];
-        
         [self.bigScrollView addSubview:tableView];
-
     }
     //频道Label换颜色
     for (UILabel *label in [self getLabelArrayFromSubviews]) {

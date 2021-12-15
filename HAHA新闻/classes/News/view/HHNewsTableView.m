@@ -11,8 +11,6 @@
 #import "HHHeaderView.h"
 #import "AFNetworking.h"
 
-
-
 #import "HHNewsModel.h"
 
 #import "HHNew_p0_TableViewCell.h"
@@ -173,12 +171,7 @@ NSString *P0cellID = @"P0cellID";
     }];
     
     
-
-
-
-    
 }
-
 
 // 创建上拉刷新控件
 - (void)setupUpRefresh
@@ -774,7 +767,6 @@ NSString *P0cellID = @"P0cellID";
             
             return  ;
         }
-        
         
     }
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ADD" object: self.fileData[indexPath.row] ];

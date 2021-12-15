@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1804762322E0B1D60056BB8E /* HHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1804762022E0B1D60056BB8E /* HHSearchViewController.m */; };
-		1804762422E0B1D60056BB8E /* HHsearchrecordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1804762122E0B1D60056BB8E /* HHsearchrecordTableViewController.m */; };
 		1830A3C822E03264008D5BA3 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1830A3BC22E03264008D5BA3 /* AFHTTPSessionManager.m */; };
 		1830A3C922E03264008D5BA3 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1830A3BF22E03264008D5BA3 /* AFNetworkReachabilityManager.m */; };
 		1830A3CA22E03264008D5BA3 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1830A3C122E03264008D5BA3 /* AFSecurityPolicy.m */; };
@@ -16,6 +14,8 @@
 		1830A3CC22E03264008D5BA3 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1830A3C522E03264008D5BA3 /* AFURLResponseSerialization.m */; };
 		1830A3CD22E03264008D5BA3 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1830A3C722E03264008D5BA3 /* AFURLSessionManager.m */; };
 		1830A3D122E081FF008D5BA3 /* HQS_LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1830A3D022E081FF008D5BA3 /* HQS_LocalData.m */; };
+		1881A44F2768F2F300A296BE /* HHsearchrecordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1881A44D2768F2F300A296BE /* HHsearchrecordTableViewController.m */; };
+		1881A4502768F2F300A296BE /* HHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1881A44E2768F2F300A296BE /* HHSearchViewController.m */; };
 		B40088D2229964F100199226 /* HHHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B40088D1229964F100199226 /* HHHeaderView.m */; };
 		B405B54E22913557004E4D06 /* HHFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B405B54D22913557004E4D06 /* HHFooterView.m */; };
 		B405B551229147E1004E4D06 /* HHcollectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B405B550229147E1004E4D06 /* HHcollectTableViewController.m */; };
@@ -42,10 +42,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1804761F22E0B1D60056BB8E /* HHSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HHSearchViewController.h; path = "HAHA新闻/classes/Search/Controller/HHSearchViewController.h"; sourceTree = SOURCE_ROOT; };
-		1804762022E0B1D60056BB8E /* HHSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HHSearchViewController.m; path = "HAHA新闻/classes/Search/Controller/HHSearchViewController.m"; sourceTree = SOURCE_ROOT; };
-		1804762122E0B1D60056BB8E /* HHsearchrecordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HHsearchrecordTableViewController.m; path = "HAHA新闻/classes/Search/Controller/HHsearchrecordTableViewController.m"; sourceTree = SOURCE_ROOT; };
-		1804762222E0B1D60056BB8E /* HHsearchrecordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HHsearchrecordTableViewController.h; path = "HAHA新闻/classes/Search/Controller/HHsearchrecordTableViewController.h"; sourceTree = SOURCE_ROOT; };
 		1830A3BA22E03264008D5BA3 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		1830A3BB22E03264008D5BA3 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		1830A3BC22E03264008D5BA3 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
@@ -62,6 +58,10 @@
 		1830A3C722E03264008D5BA3 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		1830A3CF22E081FF008D5BA3 /* HQS_LocalData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQS_LocalData.h; sourceTree = "<group>"; };
 		1830A3D022E081FF008D5BA3 /* HQS_LocalData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQS_LocalData.m; sourceTree = "<group>"; };
+		1881A44B2768F2F300A296BE /* HHSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHSearchViewController.h; sourceTree = "<group>"; };
+		1881A44C2768F2F300A296BE /* HHsearchrecordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHsearchrecordTableViewController.h; sourceTree = "<group>"; };
+		1881A44D2768F2F300A296BE /* HHsearchrecordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHsearchrecordTableViewController.m; sourceTree = "<group>"; };
+		1881A44E2768F2F300A296BE /* HHSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHSearchViewController.m; sourceTree = "<group>"; };
 		B40088D0229964F100199226 /* HHHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHeaderView.h; sourceTree = "<group>"; };
 		B40088D1229964F100199226 /* HHHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHeaderView.m; sourceTree = "<group>"; };
 		B405B4D22283F1B500CDEF3F /* HHTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHTabBarViewController.h; sourceTree = "<group>"; };
@@ -147,6 +147,17 @@
 				1830A3D022E081FF008D5BA3 /* HQS_LocalData.m */,
 			);
 			path = HQS_Tool;
+			sourceTree = "<group>";
+		};
+		1881A44A2768F2F300A296BE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1881A44B2768F2F300A296BE /* HHSearchViewController.h */,
+				1881A44C2768F2F300A296BE /* HHsearchrecordTableViewController.h */,
+				1881A44D2768F2F300A296BE /* HHsearchrecordTableViewController.m */,
+				1881A44E2768F2F300A296BE /* HHSearchViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		B405B4BE2283ED9E00CDEF3F /* classes */ = {
@@ -250,20 +261,9 @@
 		B405B4CB2283ED9E00CDEF3F /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				B405B4CC2283ED9E00CDEF3F /* Coutroller */,
+				1881A44A2768F2F300A296BE /* Controller */,
 			);
 			path = Search;
-			sourceTree = "<group>";
-		};
-		B405B4CC2283ED9E00CDEF3F /* Coutroller */ = {
-			isa = PBXGroup;
-			children = (
-				1804762222E0B1D60056BB8E /* HHsearchrecordTableViewController.h */,
-				1804762122E0B1D60056BB8E /* HHsearchrecordTableViewController.m */,
-				1804761F22E0B1D60056BB8E /* HHSearchViewController.h */,
-				1804762022E0B1D60056BB8E /* HHSearchViewController.m */,
-			);
-			path = Coutroller;
 			sourceTree = "<group>";
 		};
 		B4171BA62292F081005E5F99 /* Newsdetails */ = {
@@ -436,7 +436,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1804762322E0B1D60056BB8E /* HHSearchViewController.m in Sources */,
 				B45C81A42293DB35001224AA /* HHNewdetailTableViewCell.m in Sources */,
 				B41C4DAF22905AA300D7823E /* HHWebViewController.m in Sources */,
 				B405B54E22913557004E4D06 /* HHFooterView.m in Sources */,
@@ -445,7 +444,6 @@
 				B4FF6E4C228A845900D9A0F5 /* HHNew_p0_TableViewCell.m in Sources */,
 				1830A3CA22E03264008D5BA3 /* AFSecurityPolicy.m in Sources */,
 				B4F4E61F2281D40600A767AE /* main.m in Sources */,
-				1804762422E0B1D60056BB8E /* HHsearchrecordTableViewController.m in Sources */,
 				B40088D2229964F100199226 /* HHHeaderView.m in Sources */,
 				B45C81A12293CE14001224AA /* HHNewsdetailsTableViewController.m in Sources */,
 				B45C81BF229479F1001224AA /* HHVideoModel.m in Sources */,
@@ -456,8 +454,10 @@
 				B420D6A822A6503000B07E01 /* HHRotationTableViewCell.m in Sources */,
 				1830A3CD22E03264008D5BA3 /* AFURLSessionManager.m in Sources */,
 				B407DFA522881A910070F851 /* HHNewsModel.m in Sources */,
+				1881A4502768F2F300A296BE /* HHSearchViewController.m in Sources */,
 				B4FF6E52228A849100D9A0F5 /* HHNew_p3_TableViewCell.m in Sources */,
 				1830A3CC22E03264008D5BA3 /* AFURLResponseSerialization.m in Sources */,
+				1881A44F2768F2F300A296BE /* HHsearchrecordTableViewController.m in Sources */,
 				1830A3CB22E03264008D5BA3 /* AFURLRequestSerialization.m in Sources */,
 				B405B551229147E1004E4D06 /* HHcollectTableViewController.m in Sources */,
 				B45C81B622947975001224AA /* HHTabBarViewController.m in Sources */,

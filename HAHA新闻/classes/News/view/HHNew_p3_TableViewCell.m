@@ -57,17 +57,17 @@
         self.publishDateStrLabel = publishDateStrLabel;
         
         UIImageView  *HHImageView1 = [[UIImageView alloc] init];
-        HHImageView1.contentMode = UIViewContentModeScaleToFill ;
+        HHImageView1.contentMode = UIViewContentModeScaleAspectFit ;
         [self.contentView addSubview: HHImageView1];
         self.HHImageView1 = HHImageView1;
         
         UIImageView  *HHImageView2 = [[UIImageView alloc] init];
-        HHImageView2.contentMode = UIViewContentModeScaleToFill ;
+        HHImageView2.contentMode = UIViewContentModeScaleAspectFit ;
         [self.contentView addSubview: HHImageView2];
         self.HHImageView2 = HHImageView2;
         
         UIImageView  *HHImageView3 = [[UIImageView alloc] init];
-        HHImageView3.contentMode = UIViewContentModeScaleToFill ;
+        HHImageView3.contentMode = UIViewContentModeScaleAspectFit ;
         [self.contentView addSubview: HHImageView3];
         self.HHImageView3 = HHImageView3;
         

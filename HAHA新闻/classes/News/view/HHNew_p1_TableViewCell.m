@@ -36,7 +36,7 @@
 {
     if (self == [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         UIImageView  *HHImageView = [[UIImageView alloc] init];
-        HHImageView.contentMode = UIViewContentModeScaleToFill ;
+        HHImageView.contentMode = UIViewContentModeScaleAspectFit ;
         [self.contentView addSubview: HHImageView];
         self.HHImageView = HHImageView;
         
